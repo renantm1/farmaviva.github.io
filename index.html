@@ -102,17 +102,17 @@
                     <div class="mt-8 p-4 bg-accent-light dark:bg-gray-800 rounded-lg">
                         <h3 class="font-semibold text-center mb-3">Como você gostaria de explorar nosso conteúdo?</h3>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="#herbario" onclick="setProfile('profissional')" class="w-full text-center bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-dark transition-transform transform hover:scale-105">
+                            <a id="btn-explore-profissional" href="#herbario" class="w-full text-center bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-dark transition-transform transform hover:scale-105">
                                 Profissional / Estudante
                             </a>
-                            <a href="#herbario" onclick="setProfile('geral')" class="w-full text-center bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-transform transform hover:scale-105">
+                            <a id="btn-explore-geral" href="#herbario" class="w-full text-center bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-transform transform hover:scale-105">
                                 Público Geral
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="flex justify-center items-center">
-                    <img src="https://placehold.co/500x500/E6EFEB/3E6553?text=Planta+Viva" alt="Planta medicinal em um vaso" class="rounded-full shadow-lg max-w-sm w-full">
+                    <img src="assets/img/home.png" alt="Planta medicinal em um vaso" class="rounded-full shadow-lg max-w-sm w-full">
                 </div>
             </div>
         </section>
@@ -125,24 +125,24 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <img src="https://placehold.co/600x400/E6EFEB/3E6553?text=Nossa+Missão" alt="Mãos cuidando de uma planta" class="rounded-lg shadow-md">
+                <img src="assets/img/about.png" alt="Mãos cuidando de uma planta" class="rounded-lg shadow-md">
                 <div class="space-y-4">
                     <div class="flex items-start space-x-4">
-                        <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-10 h-10 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
                             <h4 class="font-semibold">Farmácia Viva e Banco de Dados</h4>
                             <p class="text-gray-600 dark:text-gray-400">Apresentamos um guia detalhado das espécies disponíveis em nosso Herbário, com informações validadas.</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-10 h-10 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
                             <h4 class="font-semibold">Segurança na Era Digital (IA)</h4>
                             <p class="text-gray-600 dark:text-gray-400">Testamos a confiabilidade de aplicativos de IA, expondo seus resultados e limites para um uso consciente da tecnologia.</p>
                         </div>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-10 h-10 text-primary flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         <div>
                             <h4 class="font-semibold">Linguagem Adaptada</h4>
                             <p class="text-gray-600 dark:text-gray-400">Oferecemos o conteúdo em dois níveis: Leigo e Profissional/Estudante, garantindo que a informação seja útil para todos.</p>
@@ -268,17 +268,17 @@
     <script>
         // Dados das Plantas
         const plantsData = [
-            { id: 3, popularName: 'Alecrim', scientificName: 'Rosmarinus officinalis', family: 'Lamiaceae', uses: ['Estimulante', 'Digestivo', 'Antioxidante'], parts: ['Folhas', 'Ramos'] },
-            { id: 52, popularName: 'Babosa', scientificName: 'Aloe vera', family: 'Asphodelaceae', uses: ['Cicatrizante', 'Hidratante', 'Cosmético'], parts: ['Gel das folhas'], warning: 'Apenas o gel (parte interna) deve ser usado. A casca contém aloína, que é tóxica se ingerida.' },
+            { id: 3, popularName: 'Alecrim', scientificName: 'Rosmarinus officinalis', family: 'Lamiaceae', uses: ['Estimulante', 'Digestivo', 'Antioxidante'], parts: ['Folhas', 'Ramos'], image: 'assets/img/alecrim.png'},
+            { id: 52, popularName: 'Babosa', scientificName: 'Aloe vera', family: 'Asphodelaceae', uses: ['Cicatrizante', 'Hidratante', 'Cosmético'], parts: ['Gel das folhas'], warning: 'Apenas o gel (parte interna) deve ser usado. A casca contém aloína, que é tóxica se ingerida.', image: 'assets/img/babosa.png' },
             { id: 6, popularName: 'Bálsamo', scientificName: 'Kalanchoe gastonis-bonnieri', family: 'Crassulaceae', uses: ['Cicatrizante', 'Anti-inflamatório', 'Analgésico'], parts: ['Folhas'] },
             { id: 13, popularName: 'Boldo', scientificName: 'Peumus boldus', family: 'Monimiaceae', uses: ['Digestivo', 'Hepatoprotetor', 'Colagogo'], parts: ['Folhas'] },
             { id: 9, popularName: 'Cúrcuma', scientificName: 'Curcuma longa', family: 'Zingiberaceae', uses: ['Anti-inflamatório', 'Antioxidante', 'Digestivo'], parts: ['Rizoma'] },
             { id: 16, popularName: 'Dama da Noite', scientificName: 'Cestrum nocturnum', family: 'Solanaceae', uses: ['Ornamental', 'Aromatizante'], parts: ['Flores'], toxic: true, warning: 'Planta tóxica se ingerida. Uso apenas ornamental e pela fragrância.' },
             { id: 58, popularName: 'Erva-baleeira', scientificName: 'Cordia verbenacea', family: 'Boraginaceae', uses: ['Anti-inflamatório', 'Analgésico', 'Cicatrizante'], parts: ['Folhas'] },
-            { id: 34, popularName: 'Erva cidreira', scientificName: 'Lippia alba', family: 'Verbenaceae', uses: ['Calmante', 'Digestivo', 'Antiespasmódico'], parts: ['Folhas', 'Flores'] },
+            { id: 34, popularName: 'Erva cidreira', scientificName: 'Lippia alba', family: 'Verbenaceae', uses: ['Calmante', 'Digestivo', 'Antiespasmódico'], parts: ['Folhas', 'Flores'], image: 'assets/img/ervacidreira.png' },
             { id: 11, popularName: 'Espada de São Jorge', scientificName: 'Sansevieria trifasciata', family: 'Asparagaceae', uses: ['Ornamental'], parts: ['Folhas'], ornamental: true, warning: 'Não possui uso medicinal. Conhecida por purificar o ar.' },
             { id: 10, popularName: 'Gengibre', scientificName: 'Zingiber officinale', family: 'Zingiberaceae', uses: ['Anti-inflamatório', 'Digestivo', 'Antiemético'], parts: ['Rizoma'] },
-            { id: 2, popularName: 'Hortelã', scientificName: 'Mentha spp.', family: 'Lamiaceae', uses: ['Digestivo', 'Descongestionante', 'Aromatizante'], parts: ['Folhas', 'Ramos'] },
+            { id: 2, popularName: 'Hortelã', scientificName: 'Mentha spp.', family: 'Lamiaceae', uses: ['Digestivo', 'Descongestionante', 'Aromatizante'], parts: ['Folhas', 'Ramos'], image: 'assets/img/hortela.png' },
             { id: 17, popularName: 'Hortelã Gorda', scientificName: 'Plectranthus amboinicus', family: 'Lamiaceae', uses: ['Expectorante', 'Digestivo', 'Anti-inflamatório'], parts: ['Folhas'] },
             { id: 5, popularName: 'Louro', scientificName: 'Laurus nobilis', family: 'Lauraceae', uses: ['Digestivo', 'Anti-inflamatório', 'Temperos'], parts: ['Folhas'] },
             { id: 12, popularName: 'Manjericão branco', scientificName: 'Ocimum basilicum', family: 'Lamiaceae', uses: ['Aromatizante', 'Antioxidante', 'Anti-inflamatório'], parts: ['Folhas', 'Flores'] },
@@ -288,10 +288,7 @@
             { id: 15, popularName: 'Quebra-Pedra', scientificName: 'Phyllanthus niruri', family: 'Phyllanthaceae', uses: ['Diurético', 'Cálculos renais', 'Hepatoprotetor'], parts: ['Planta toda'] },
             { id: 8, popularName: 'Rosa-do-deserto', scientificName: 'Adenium obesum', family: 'Apocynaceae', uses: ['Ornamental'], parts: ['Flores', 'Caudex'], toxic: true, warning: 'Planta tóxica se ingerida. Manusear com cuidado. Uso apenas ornamental.' }
         ].sort((a, b) => a.popularName.localeCompare(b.popularName))
-        .map(plant => ({
-            ...plant,
-            image: `https://placehold.co/400x400/3E6553/FFFFFF?text=${plant.popularName.replace(/ /g, '+')}`
-        }));
+
         
         // Herbário Digital Lógica
         const gallery = document.getElementById('plants-gallery');
@@ -476,6 +473,8 @@
             const faqContainer = document.getElementById('faq-container');
             const allNavLinks = document.querySelectorAll('header a[href^="#"]');
             const sections = document.querySelectorAll('main > section');
+            const btnExploreProfissional = document.getElementById('btn-explore-profissional');
+            const btnExploreGeral = document.getElementById('btn-explore-geral');
 
             // --- Lógica de Navegação por Abas ---
             function showSection(targetId) {
@@ -501,6 +500,18 @@
                     const targetId = link.getAttribute('href');
                     if (targetId && targetId.startsWith('#')) showSection(targetId);
                 });
+            });
+
+            btnExploreProfissional.addEventListener('click', (e) => {
+                e.preventDefault();
+                setProfile('profissional');
+                showSection('#herbario');
+            });
+
+            btnExploreGeral.addEventListener('click', (e) => {
+                e.preventDefault();
+                setProfile('geral');
+                showSection('#herbario');
             });
 
             // --- Lógica do Tema ---
