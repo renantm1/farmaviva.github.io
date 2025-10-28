@@ -56,8 +56,11 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <a href="#inicio" class="flex items-center space-x-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-4-3-4.5M12 22a7 7 0 0 1-7-7c0-2 1-4 3-4.5M12 22V12M5 12.5c0-1.5 1-3 3-3.5M19 12.5c0-1.5-1-3-3-3.5M12 2a7 7 0 0 0-7 7c0 2 1 4 3 4.5M12 2a7 7 0 0 1 7 7c0 2-1 4-3 4.5M12 2V12"/></svg>
+                    <img src="assets/img/favicon.png" 
+                        class="w-6 h-6 invert dark:invert-0 transition-all duration-300 text-primary" 
+                        alt="Plantex">
                     <span class="text-xl font-bold text-primary">PLANTEX</span>
+
                 </a>
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="#inicio" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Início</a>
@@ -272,21 +275,21 @@
             { id: 52, popularName: 'Babosa', scientificName: 'Aloe vera', family: 'Asphodelaceae', uses: ['Cicatrizante', 'Hidratante', 'Cosmético'], parts: ['Gel das folhas'], warning: 'Apenas o gel (parte interna) deve ser usado. A casca contém aloína, que é tóxica se ingerida.', image: 'assets/img/babosa.png' },
             { id: 6, popularName: 'Bálsamo', scientificName: 'Kalanchoe gastonis-bonnieri', family: 'Crassulaceae', uses: ['Cicatrizante', 'Anti-inflamatório', 'Analgésico'], parts: ['Folhas'], image:'assets/img/balsamo.png'},
             { id: 13, popularName: 'Boldo', scientificName: 'Peumus boldus', family: 'Monimiaceae', uses: ['Digestivo', 'Hepatoprotetor', 'Colagogo'], parts: ['Folhas'], image:'assets/img/boldo.png'},
-            { id: 9, popularName: 'Cúrcuma', scientificName: 'Curcuma longa', family: 'Zingiberaceae', uses: ['Anti-inflamatório', 'Antioxidante', 'Digestivo'], parts: ['Rizoma'] },
-            { id: 16, popularName: 'Dama da Noite', scientificName: 'Cestrum nocturnum', family: 'Solanaceae', uses: ['Ornamental', 'Aromatizante'], parts: ['Flores'], toxic: true, warning: 'Planta tóxica se ingerida. Uso apenas ornamental e pela fragrância.' },
-            { id: 58, popularName: 'Erva-baleeira', scientificName: 'Cordia verbenacea', family: 'Boraginaceae', uses: ['Anti-inflamatório', 'Analgésico', 'Cicatrizante'], parts: ['Folhas'] },
+            { id: 9, popularName: 'Cúrcuma', scientificName: 'Curcuma longa', family: 'Zingiberaceae', uses: ['Anti-inflamatório', 'Antioxidante', 'Digestivo'], parts: ['Rizoma'], image:'assets/img/curcuma.png'},
+            { id: 16, popularName: 'Dama da Noite', scientificName: 'Cestrum nocturnum', family: 'Solanaceae', uses: ['Ornamental', 'Aromatizante'], parts: ['Flores'], image:'assets/img/damadanoite.png', toxic: true, warning: 'Planta tóxica se ingerida. Uso apenas ornamental e pela fragrância.'},
+            { id: 58, popularName: 'Erva-baleeira', scientificName: 'Cordia verbenacea', family: 'Boraginaceae', uses: ['Anti-inflamatório', 'Analgésico', 'Cicatrizante'], parts: ['Folhas'], image:'assets/img/ervabaleeira.png'},
             { id: 34, popularName: 'Erva cidreira', scientificName: 'Lippia alba', family: 'Verbenaceae', uses: ['Calmante', 'Digestivo', 'Antiespasmódico'], parts: ['Folhas', 'Flores'], image: 'assets/img/ervacidreira.png' },
-            { id: 11, popularName: 'Espada de São Jorge', scientificName: 'Sansevieria trifasciata', family: 'Asparagaceae', uses: ['Ornamental'], parts: ['Folhas'], ornamental: true, warning: 'Não possui uso medicinal. Conhecida por purificar o ar.' },
-            { id: 10, popularName: 'Gengibre', scientificName: 'Zingiber officinale', family: 'Zingiberaceae', uses: ['Anti-inflamatório', 'Digestivo', 'Antiemético'], parts: ['Rizoma'] },
+            { id: 11, popularName: 'Espada de São Jorge', scientificName: 'Sansevieria trifasciata', family: 'Asparagaceae', uses: ['Ornamental'], parts: ['Folhas'], image:'assets/img/espada.png', ornamental: true, warning: 'Não possui uso medicinal. Conhecida por purificar o ar.' },
+            { id: 10, popularName: 'Gengibre', scientificName: 'Zingiber officinale', family: 'Zingiberaceae', uses: ['Anti-inflamatório', 'Digestivo', 'Antiemético'], parts: ['Rizoma'], image:'assets/img/gengibre.png' },
             { id: 2, popularName: 'Hortelã', scientificName: 'Mentha spp.', family: 'Lamiaceae', uses: ['Digestivo', 'Descongestionante', 'Aromatizante'], parts: ['Folhas', 'Ramos'], image: 'assets/img/hortela.png' },
-            { id: 17, popularName: 'Hortelã Gorda', scientificName: 'Plectranthus amboinicus', family: 'Lamiaceae', uses: ['Expectorante', 'Digestivo', 'Anti-inflamatório'], parts: ['Folhas'] },
-            { id: 5, popularName: 'Louro', scientificName: 'Laurus nobilis', family: 'Lauraceae', uses: ['Digestivo', 'Anti-inflamatório', 'Temperos'], parts: ['Folhas'] },
-            { id: 12, popularName: 'Manjericão branco', scientificName: 'Ocimum basilicum', family: 'Lamiaceae', uses: ['Aromatizante', 'Antioxidante', 'Anti-inflamatório'], parts: ['Folhas', 'Flores'] },
-            { id: 1, popularName: 'Maracujá', scientificName: 'Passiflora edulis', family: 'Passifloraceae', uses: ['Calmante', 'Alimento', 'Ansiolítico'], parts: ['Fruto', 'Folhas'] },
-            { id: 18, popularName: 'Melão de São Caetano', scientificName: 'Momordica charantia', family: 'Cucurbitaceae', uses: ['Hipoglicemiante', 'Anti-inflamatório', 'Vermífugo'], parts: ['Frutos', 'Folhas'] },
-            { id: 7, popularName: 'Melissa', scientificName: 'Melissa officinalis', family: 'Lamiaceae', uses: ['Calmante', 'Ansiolítico', 'Digestivo'], parts: ['Folhas'] },
-            { id: 15, popularName: 'Quebra-Pedra', scientificName: 'Phyllanthus niruri', family: 'Phyllanthaceae', uses: ['Diurético', 'Cálculos renais', 'Hepatoprotetor'], parts: ['Planta toda'] },
-            { id: 8, popularName: 'Rosa-do-deserto', scientificName: 'Adenium obesum', family: 'Apocynaceae', uses: ['Ornamental'], parts: ['Flores', 'Caudex'], toxic: true, warning: 'Planta tóxica se ingerida. Manusear com cuidado. Uso apenas ornamental.' }
+            { id: 17, popularName: 'Hortelã Gorda', scientificName: 'Plectranthus amboinicus', family: 'Lamiaceae', uses: ['Expectorante', 'Digestivo', 'Anti-inflamatório'], parts: ['Folhas'], image:'assets/img/hortelagorda.png' },
+            { id: 5, popularName: 'Louro', scientificName: 'Laurus nobilis', family: 'Lauraceae', uses: ['Digestivo', 'Anti-inflamatório', 'Temperos'], parts: ['Folhas'], image:'assets/img/louro.png'},
+            { id: 12, popularName: 'Manjericão branco', scientificName: 'Ocimum basilicum', family: 'Lamiaceae', uses: ['Aromatizante', 'Antioxidante', 'Anti-inflamatório'], parts: ['Folhas', 'Flores'], image:'assets/img/manjericaobranco.png' },
+            { id: 1, popularName: 'Maracujá', scientificName: 'Passiflora edulis', family: 'Passifloraceae', uses: ['Calmante', 'Alimento', 'Ansiolítico'], parts: ['Fruto', 'Folhas'], image:'assets/img/maracuja.png'},
+            { id: 18, popularName: 'Melão de São Caetano', scientificName: 'Momordica charantia', family: 'Cucurbitaceae', uses: ['Hipoglicemiante', 'Anti-inflamatório', 'Vermífugo'], parts: ['Frutos', 'Folhas'], image:'assets/img/nigagori.png'},
+            { id: 7, popularName: 'Melissa', scientificName: 'Melissa officinalis', family: 'Lamiaceae', uses: ['Calmante', 'Ansiolítico', 'Digestivo'], parts: ['Folhas'], image:'assets/img/melissa.png'},
+            { id: 15, popularName: 'Quebra-Pedra', scientificName: 'Phyllanthus niruri', family: 'Phyllanthaceae', uses: ['Diurético', 'Cálculos renais', 'Hepatoprotetor'], parts: ['Planta toda'], image:'assets/img/quebrapedra.png'},
+            { id: 8, popularName: 'Rosa-do-deserto', scientificName: 'Adenium obesum', family: 'Apocynaceae', uses: ['Ornamental'], parts: ['Flores', 'Caudex'], image:'assets/img/rosa.png', toxic: true, warning: 'Planta tóxica se ingerida. Manusear com cuidado. Uso apenas ornamental.' }
         ].sort((a, b) => a.popularName.localeCompare(b.popularName))
 
         
